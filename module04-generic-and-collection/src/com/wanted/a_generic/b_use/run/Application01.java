@@ -1,0 +1,34 @@
+package com.wanted.a_generic.b_use.run;
+
+import com.wanted.a_generic.b_use.Bunny;
+import com.wanted.a_generic.b_use.DrunkenBunny;
+import com.wanted.a_generic.b_use.Rabbit;
+import com.wanted.a_generic.b_use.RabbitFarm;
+
+public class Application01 {
+
+    public static void main(String[] args) {
+        // RabbitFarm<Animal> farm1 = new RabbitFarm<>();
+
+        RabbitFarm<Rabbit> farm2 = new RabbitFarm<>();
+        RabbitFarm<Bunny> farm3 = new RabbitFarm<>();
+        RabbitFarm<DrunkenBunny> farm4 = new RabbitFarm<>();
+
+        //farm2.setAnimal(rabbit); 아래랑 같은 거임
+        // Rabbit rabbit = new Rabbit();
+        farm2.setAnimal(new Rabbit());
+
+        //Rabbit rabbit = farm2.getAnimal();
+        // rabbit.cry(); 아래처럼 축약 가능
+        farm2.getAnimal().cry();
+
+        farm3.setAnimal(new Bunny());
+        farm3.getAnimal().cry();
+
+        farm4.setAnimal(new DrunkenBunny());
+        farm4.getAnimal().cry();
+
+
+
+    }
+}
